@@ -1,0 +1,33 @@
+@charset "utf-8";
+form {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+#businessmsg {
+	width: 40%;
+	float: left;
+	margin-right: 5%;
+}
+#businessimg {
+	float: left;
+	width: 55%;
+}
+#buedit {
+	clear: left;
+	width: 100%;
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 60px;
+}.title {
+	color: #3399CC;
+	font-family: "Microsoft YaHei UI";
+}
+.msg {
+	color: #000000;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+#editbutton {
+	width: 400px;
+}

@@ -1,0 +1,25 @@
+﻿#include("HeadStartPage.html")
+<link href="css/businessInfo.css" rel="stylesheet" type="text/css">
+#include("HeadEndPage.html")
+#parse("BodyStartPage.html")
+#include("NavStorePage.html")
+<div id="main">
+  	<form method="post" action="BusinessInfoEdit.ashx">
+        <div id="businessmsg">
+            <input type="hidden" name="businessid" value="$data.Business.BusinessID" />
+            <input type="hidden" name="action" value="edit" />
+            <label class="title">餐馆名称：</label><label name="businessname" class="msg">$data.Business.BusinessName</label><br />
+            <label class="title">餐馆类型：</label><label name="businessstyle" class="msg">$data.Business.BusinessStyle</label><br />
+            <label class="title">电话：</label><label name="businessphone" class="msg">$data.Business.BusinessPhone</label><br />
+            <label class="title">地址：</label><label name="businessaddress" class="msg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$data.Business.BusinessAddress</label><br />   
+            <label class="title">介绍：</label><label name="businessdescribe" class="msg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$data.Business.BusinessDescribe</label><br />
+        </div>
+        <div id="businessimg">
+            <img  src="GetImageByID.ashx?key=business&id=$data.Business.BusinessID" />
+        </div>
+        <div id="buedit">
+            <button id="editbutton" type="submit" class="btn btn-primary btn-lg">编辑</button>
+        </div>
+    </form>        
+</div>  
+#include("FooterPage.html")

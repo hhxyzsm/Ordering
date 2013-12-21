@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+.foodMSG {
+	color: #000000;
+	width: 235px;
+	margin-left: 20px;
+	margin-top: 20px;
+	float: left;
+	-webkit-box-shadow: 0px 0px;
+	box-shadow: 0px 0px;
+	border: 1px solid #DDDDDD;
+	margin-bottom: 10px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.foodimg {
+	-webkit-box-shadow: 1px 1px 15px #999999;
+	box-shadow: 1px 1px 15px #999999;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 5px;
+	clear: right;
+}
+.name, .pay {
+	float: left;
+}
+.taste, .pop {
+	float: right;
+}
+.name {
+	margin-left: 10px;
+	color: #993300;
+	font-family: "Microsoft YaHei UI";
+	font-size: large;
+	font-weight: bold;
+}
+.taste {
+	color: #636363;
+	font-family: "Microsoft YaHei UI";
+	margin-right: 10px;
+	font-size: small;
+    padding-top:7px;
+}
+.pay {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight: 800;
+	margin-left: 20px;
+	color: #F76120;
+	font-size: large;
+}
+.pop {
+	font-family: "Microsoft YaHei UI";
+	font-size: small;
+	color: #484848;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.modify {
+	clear: left;
+}
+.modify button {
+	margin-left: 70px;
+	margin-bottom: 10px;
+	width: 100px;
+}
+#kindedit {
+	width: 100%;
+	margin-left: 10px;
+}
+#search {
+	margin-top: 20px;
+	width: 300px;
+	float: right;
+	margin-right: 110px;
+}
+#MSG {
+	clear: right;
+}
+
+

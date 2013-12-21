@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Ordering", "http://localhost:5943", "{9C86B3BD-B6EC-497C-94F1-B3C3DF33377D}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_5943"
+		Debug.AspNetCompiler.PhysicalPath = "..\Ordering\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5943\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_5943"
+		Release.AspNetCompiler.PhysicalPath = "..\Ordering\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_5943\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\Ordering\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C86B3BD-B6EC-497C-94F1-B3C3DF33377D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C86B3BD-B6EC-497C-94F1-B3C3DF33377D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C86B3BD-B6EC-497C-94F1-B3C3DF33377D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C86B3BD-B6EC-497C-94F1-B3C3DF33377D}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

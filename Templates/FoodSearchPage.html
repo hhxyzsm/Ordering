@@ -1,0 +1,55 @@
+﻿#include("HeadStartPage.html")
+<link href="css/foodMSG.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #food {
+        width:100%;
+    }
+</style>
+#include("HeadEndPage.html")
+#parse("BodyStartPage.html")
+#include("NavFoodPage.html")
+<div id="main">
+    <div id="food">
+        <div id="search" class="col-lg-6">
+            <form action="search.ashx" method="post">
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">搜索</button>
+                  </span>
+                  <input type="text" name="search" class="form-control">
+                </div><!-- /input-group -->
+            </form>
+        </div>
+        <div id="MSG">
+            #foreach($food in $data.FoodInfo)
+                <form action="../FoodEdit.ashx" method="get" >
+                    <input type="hidden" name="Action" value="Edit" />
+                    <input type="hidden" name="Id" value="$food.FoodID" />
+                    <input type="hidden" name="Kind" value="$food.FoodKind" />
+
+                    <div class="foodMSG">
+                        <div class="name">
+                            <p>$food.FoodName</p>
+                        </div>
+                        <div class="taste">
+                            <p>$food.FoodTaste</p>
+                        </div>
+                        <div class="foodimg">
+                        
+                            <img  src="GetImageByID.ashx?key=food&id=$food.FoodID" /></div>
+                        <div class="pay">
+                            <p>￥ $food.FoodPrice</p>
+                        </div>
+                        <div class="pop">
+                            <p>$food.FoodPopularIndex 人点</p>
+                        </div>
+                        <div class="modify">
+                            <button type="submit" class="btn btn-primary btn-lg">编辑</button>
+                        </div>
+                    </div>
+                </form>
+            #end
+        </div>
+    </div>
+</div>  
+#include("FooterPage.html")

@@ -1,0 +1,33 @@
+﻿#include("HeadStartPage.html")
+<link href="css/foodEdit.css" rel="stylesheet" type="text/css">
+#include("HeadEndPage.html")
+#parse("BodyStartPage.html")
+#include("NavFoodPage.html")
+
+<div id="main">
+    <form id="foodedit" action="FoodEdit.ashx" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="Action" value="$data.Action" />
+        <input type="hidden" name="Save" value="true" />
+        <input type="hidden" name="Id" value="$data.FoodInfo.FoodID" />
+        <input type="hidden" name="Kind" value="$data.Kind" />
+
+        <label>菜名：</label><input type="text" name="foodname" value="$data.FoodInfo.FoodName" /><br />
+        <label>价格：</label><input type="text" name="foodprice" value="$data.FoodInfo.FoodPrice" /><br />
+        <label>口味：</label><input type="text" name="foodtaste" value="$data.FoodInfo.FoodTaste" /><br />
+        <label>种类：</label><input type="text" name="foodkind" value="$data.FoodInfo.FoodKind" /><br />
+        #if($data.Action=="Edit")    
+            <img  src="GetImageByID.ashx?key=food&id=$data.FoodInfo.FoodID" />
+        #end
+        <input type="file" id="uoload"  name="imgupload"/><br/>
+        <input id="save" class="btn btn-primary btn-lg" type="submit" value="保存" />
+    </form>
+    #if($data.Action=="Edit")
+    <form id="fooddelete" action="FoodEdit.ashx" method="post">
+        <input type="hidden" name="Action" value="Delete" />
+        <input type="hidden" name="Id" value="$data.FoodInfo.FoodID" />
+        <input type="hidden" name="Kind" value="$data.Kind" />
+        <input id="save" class="btn btn-primary btn-lg" type="submit" value="删除" />
+    </form>
+    #end
+</div>
+#include("FooterPage.html")

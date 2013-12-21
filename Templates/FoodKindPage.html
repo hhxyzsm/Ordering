@@ -1,0 +1,14 @@
+﻿<div id="kind">
+    <ul>
+        #foreach($kind in $data.FoodKind)
+            #if($data.Kind==$kind.KindName)
+            <li><a href="FoodManagement.ashx?Kind=$kind.KindName" class="thiskind">$kind.KindName</a></li>
+            #else
+            <li><a href="FoodManagement.ashx?Kind=$kind.KindName">$kind.KindName</a></li>
+            #end
+        #end
+    </ul>
+    <!--<form action="FoodKindEdit.ashx" method="post">
+        <button id="kindedit" type="button" class="btn btn-primary btn-lg">编辑类型</button>
+    </form>-->
+</div>
