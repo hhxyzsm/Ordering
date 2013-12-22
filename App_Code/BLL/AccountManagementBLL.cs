@@ -14,4 +14,8 @@ public class AccountManagementBLL
 		// TODO: 在此处添加构造函数逻辑
 		//
 	}
+    public static void Update(Store store)
+    {
+        new StoreDAL().Update(store);
+    }
 }

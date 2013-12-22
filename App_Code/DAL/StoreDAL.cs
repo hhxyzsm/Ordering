@@ -26,7 +26,7 @@ public class StoreDAL
     /// <returns>通过返回 true ，否则返回 false </returns>
     public Store CheckUserInfo(string username, string password)
     {
-        string sql = "select StoreName,StorePassword,StoreBusinessID from Store where StoreName=@StoreName and StorePassword=@Password";
+        string sql = "select StoreName,StorePassword,StoreBusinessID,StoreID from Store where StoreName=@StoreName and StorePassword=@Password";
         //为了安全性，就直接提示用户名和密码错误，而不是提示“用户名不存在”或者“密码错误”
         //不分开检查 email 和 password 了
         //string sqlEmail = "select Email from Tb_UserLogin where Email=@Email";
@@ -45,6 +45,7 @@ public class StoreDAL
         {
             Store store = new Store();
             store.StoreBusinessID =(Guid) dt.Rows[0]["StoreBusinessID"];
+            store.StoreID = (Guid)dt.Rows[0]["StoreID"];
             return store;
         }
         else
@@ -114,10 +115,9 @@ public class StoreDAL
     public void Update(Store model)
     {
         SqlHelper.ExecuteNonQuery(@"UPDATE Store set 
-                                    StoreName = @StoreName,
-                                    StorePassword = @StorePassword,
+                                    StorePassword = @StorePassword
                                     WHERE StoreID=@Id",
-            new SqlParameter("@StoreName", model.StoreName),
+            new SqlParameter("@Id", model.StoreID),
             new SqlParameter("@StorePassword", model.StorePassword));
     }
 }

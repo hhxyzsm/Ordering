@@ -1,0 +1,21 @@
+﻿#include("HeadStartPage.html")
+<link href="css/account.css" rel="stylesheet" type="text/css">
+#include("HeadEndPage.html")
+#parse("BodyStartPage.html")
+#include("NavAccountPage.html")
+<div id="main">
+    <div id="msg">
+        <form id="account" action="BusinessAccountSave.ashx" method="post">
+            <div id="text">
+                <input type="hidden" value="$data.StoreID" name="storeid" />
+                <label>登录名：</label><label>$data.UserName</label><br/>
+                <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                <input type="password" name="password" /><br/>
+            </div>
+            <div id="button">
+                <input  class="btn btn-primary btn-lg" type="submit" value="保存" />
+            </div>
+        </form>
+    </div>         
+</div>  
+#include("FooterPage.html")

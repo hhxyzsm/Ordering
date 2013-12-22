@@ -1,0 +1,31 @@
+@charset "utf-8";
+#account {
+	width: 233px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+}#msg {
+	height: 100%;
+	margin-top: 150px;
+}
+#main {
+	height: 270px;
+}
+
+#button {
+	height: 50px;
+	font-family: "Microsoft YaHei UI";
+	font-size: 12px;
+	margin-top: 40px;
+	width: 233px;
+}
+#button input {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+#text {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}

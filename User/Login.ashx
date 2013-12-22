@@ -26,6 +26,7 @@ public class Login : IHttpHandler, IRequiresSessionState{
         {
             context.Session["username"] = username;
             context.Session["businessid"] = store.StoreBusinessID;
+            context.Session["storeid"] = store.StoreID;
             //if (context.Request.Form["ckremember"] == "remember-me")
             //{
             //    context.Response.Cookies["userInfo"]["username"] = username;
