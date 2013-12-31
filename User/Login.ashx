@@ -7,19 +7,11 @@ using System.Web.SessionState;
 public class Login : IHttpHandler, IRequiresSessionState{
     
     public void ProcessRequest (HttpContext context) {
-        context.Response.ContentType = "text/plain";
+        context.Response.ContentType = "text/html";
         string username, password;
-        //if (context.Request.Cookies["userInfo"] != null)
-        //{           
-        //    username = context.Request.Cookies["userInfo"]["username"];
-        //    password = CommentHelper.GetMD5(context.Request.Cookies["userInfo"]["password"]);
-
-        //}
-        //else
-        //{
+        
         username = context.Request.Form["username"];
         password = CommentHelper.GetMD5(context.Request.Form["password"]);
-        //}
 
         Store store = new UserLoginBLL().CheckStoreUserLogin(username,password);
         if (store != null)
